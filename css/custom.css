@@ -30,7 +30,11 @@ body > .container {
     border: 1px solid #DDD;
 }
 
-.navbar-form {}
+.navbar-form {
+	position: relative;
+	z-index: 5;
+}
+
 	.navbar-form .form-group { position: relative; }
 		.navbar-form .form-group input { padding-right: 50px; }
 		.navbar-form .form-group button {
