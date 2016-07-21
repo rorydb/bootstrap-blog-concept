@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+   
+   <head>
+      <title>Blog Example</title>
+      <meta charset="utf-8">
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0, user-scalable=no">
+      
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href = "css/bootstrap-theme.css" rel = "stylesheet">
+      <link href = "css/custom.css" rel = "stylesheet">
+      
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      
+   </head>
+
+   <body>
+      
+      <div class="modal fade" id="blog-post" tabindex="-1" role="dialog">
+         <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="modal-title">Post Title Here   <br /><small>By: Rory Becker - 03/04/1994</small></h3></div>
+
+            <div class="modal-body">
+
+               <article>
+                     <div class="img-container">
+                        <img src="http://placehold.it/815x300" class="img-responsive img-thumbnail" alt="Placeholder Image" />
+                     </div>
+                     
+                      <br /><br />
+
+                     <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                     </p>
+
+                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+                     <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>                     
+               </article>            
+            </div>
+
+            <div class="modal-footer">
+               <input type="text" placeholder="http://blog-site-here.placeholder/" value="http://blog-site-here.placeholder/" readonly/>
+               <button type="button" id="permalink" class="btn btn-default">Permalink</button>
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+
+      <header>
+         <nav class="navbar navbar-default navbar-top">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <a href="#" class="navbar-brand">Bloggy McBlogFace</a>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search-area"><span class="glyphicon glyphicon-search"></span></button>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-links"><span class="glyphicon glyphicon-list"></span></button>
+
+               </div>
+   
+               <div class="collapse navbar-collapse navbar-right" id="search-area">
+                  <form action="#" class="navbar-form" role="search">
+                     <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Find a Post..." /> <button type="submit" class="btn btn-default">Search</button>
+
+                        <div id="results-loading">
+                           <span class="glyphicon glyphicon-refresh"></span>
+                        </div>
+
+                        <div id="search-results">
+
+                        </div>
+                     </div>
+                  </form>
+               </div>
+
+               <div class="collapse navbar-collapse navbar-right" id="nav-links">
+                  <ul class="nav navbar-nav">
+                     <li><a href="#">Posts</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#" id="contact" data-toggle="popover">Contact</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+
+      <div class="container">
+         <div class="row">
+            <aside id="side-navigation" class="col-xs-12 col-sm-3 col-sm-push-9">
+               <section>
+                  <h3><span class="label label-default">Recent Posts</span><a href="#recent-posts" data-toggle="collapse"></a></h3>
+                  <ul id="recent-posts" class="nav nav-stacked collapse" aria-expanded="true">
+                     <li role="presentation" class="presentation"><a href="#">Post #1 - <small>03/04/1994</small></a></li>
+                     <li role="presentation" class="presentation"><a href="#">Post #2 - <small>03/04/1994</small></a></li>
+                     <li role="presentation" class="presentation"><a href="#">Post #3 - <small>03/04/1994</small></a></li>
+                     <li role="presentation" class="presentation"><a href="#">Post #4 - <small>03/04/1994</small></a></li>
+                     <li role="presentation" class="presentation"><a href="#">Post #5 - <small>03/04/1994</small></a></li>
+                     <li role="presentation" class="presentation"><a href="#">Post #6 - <small>03/04/1994</small></a></li>
+                  </ul>
+               </section>
+
+               <section>
+                  <h3><span class="label label-default">Browse By Category</span><a href="#categories" data-toggle="collapse"></a></h3>
+                  <ul id="categories" class="nav nav-stacked collapse" aria-expanded="true">
+                     <li role="presentation" class="presentation"><a href="#">Technology</a></li>
+                     <li role="presentation" class="presentation"><a href="#">Literature</a></li>
+                     <li role="presentation" class="presentation"><a href="#">Anarchism</a></li>
+                     <li role="presentation" class="presentation"><a href="#">Communism</a></li>
+                     <li role="presentation" class="presentation"><a href="#">Poetry</a></li>
+                     <li role="presentation" class="presentation"><a href="#">Odds and Ends</a></li>
+                  </ul>
+               </section>
+
+               <section>
+                  <h3><span class="label label-default">Browse By View</span><a href="#views" data-toggle="collapse"></a></h3>
+                  <ul id="views" class="nav nav-stacked collapse" aria-expanded="true">       
+                     <li role="presentation" class="presentation"><a href="#">Detailed List View</a></li>
+                     <li role="presentation" class="presentation"><a href="#">Thumbnail View</a></li>
+                  </ul>
+               </section>               
+            </aside>
+
+            <section id="posts" class="col-xs-12 col-sm-9 col-sm-pull-3">
+               <article class="panel panel-default">
+                  <div class="panel-heading">
+                     <h2 class="panel-title">Post Title Here &nbsp;&nbsp;<small>By: Rory Becker - 03/04/1994</small>
+                     </h2>
+                  </div>
+
+                  <div class="panel-body">
+                     <div class="img-container">
+                        <img src="http://placehold.it/815x300" class="img-responsive img-thumbnail" alt="Placeholder Image" />
+                     </div>
+                     
+                      <br /><br />
+
+                     <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <a href="#" data-toggle="modal" data-target="#blog-post"><small>(read more)</small></a>
+                     </p>
+                  </div>
+               </article>
+
+               <article class="panel panel-default">
+                  <div class="panel-heading">
+                     <h2 class="panel-title">Post Title Here &nbsp;&nbsp;<small>By: Rory Becker - 03/04/1994</small>
+                     </h2>
+                  </div>
+
+                  <div class="panel-body">
+                     <div class="img-container">
+                        <img src="http://placehold.it/815x300" class="img-responsive img-thumbnail" alt="Placeholder Image" />
+                     </div>
+                     
+                      <br /><br />
+
+                     <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <a href="#" data-toggle="modal" data-target="#blog-post"><small>(read more)</small></a>
+                     </p>
+                  </div>
+               </article>
+
+               <article class="panel panel-default">
+                  <div class="panel-heading">
+                     <h2 class="panel-title">Post Title Here &nbsp;&nbsp;<small>By: Rory Becker - 03/04/1994</small>
+                     </h2>
+                  </div>
+
+                  <div class="panel-body">
+                     <div class="img-container">
+                        <img src="http://placehold.it/815x300" class="img-responsive img-thumbnail" alt="Placeholder Image" />
+                     </div>
+                     
+                      <br /><br />
+
+                     <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <a href="#" data-toggle="modal" data-target="#blog-post"><small>(read more)</small></a>
+                     </p>
+                  </div>
+               </article>
+
+               <article class="panel panel-default">
+                  <div class="panel-heading">
+                     <h2 class="panel-title">Post Title Here &nbsp;&nbsp;<small>By: Rory Becker - 03/04/1994</small>
+                     </h2>
+                  </div>
+
+                  <div class="panel-body">
+                     <div class="img-container">
+                        <img src="http://placehold.it/815x300" class="img-responsive img-thumbnail" alt="Placeholder Image" />
+                     </div>
+                     
+                      <br /><br />
+
+                     <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <a href="#" data-toggle="modal" data-target="#blog-post"><small>(read more)</small></a>
+                     </p>
+                  </div>
+               </article>                              
+            </section>            
+            
+         </div>
+
+         <!-- <p class="lead"></p> for leading paragraph  -->
+
+      </div>
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="js/vendor/jquery-1.12.3.js"></script>
+      
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.js"></script>
+
+      <!-- jRespond -->
+      <script src="js/jRespond.min.js"></script>
+
+      <!-- Custom JS -->
+      <script src="js/main.js"></script>      
+      
+   </body>  
+
+</html>
